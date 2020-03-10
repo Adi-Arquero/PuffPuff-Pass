@@ -20,9 +20,12 @@
 		8915810D2417B6F600ACC534 /* SignInViewController+UI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8915810C2417B6F600ACC534 /* SignInViewController+UI.swift */; };
 		8915810F2417B9BA00ACC534 /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8915810E2417B9BA00ACC534 /* ForgotPasswordViewController.swift */; };
 		891581112417B9D000ACC534 /* ForgotPasswordViewController+UI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 891581102417B9D000ACC534 /* ForgotPasswordViewController+UI.swift */; };
+		891581132417C74B00ACC534 /* GoogleService-Info (1).plist in Resources */ = {isa = PBXBuildFile; fileRef = 891581122417C74B00ACC534 /* GoogleService-Info (1).plist */; };
+		CCBCF885230030625C829951 /* Pods_PuffPuff_Pass.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF1254B3A07FA1E6E75818C9 /* Pods_PuffPuff_Pass.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7C9FF144A6E2874A73A2573D /* Pods-PuffPuff-Pass.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PuffPuff-Pass.debug.xcconfig"; path = "Target Support Files/Pods-PuffPuff-Pass/Pods-PuffPuff-Pass.debug.xcconfig"; sourceTree = "<group>"; };
 		891580EB2417953000ACC534 /* PuffPuff-Pass.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "PuffPuff-Pass.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		891580EE2417953000ACC534 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		891580F02417953000ACC534 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -38,6 +41,9 @@
 		8915810C2417B6F600ACC534 /* SignInViewController+UI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SignInViewController+UI.swift"; sourceTree = "<group>"; };
 		8915810E2417B9BA00ACC534 /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
 		891581102417B9D000ACC534 /* ForgotPasswordViewController+UI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ForgotPasswordViewController+UI.swift"; sourceTree = "<group>"; };
+		891581122417C74B00ACC534 /* GoogleService-Info (1).plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info (1).plist"; sourceTree = "<group>"; };
+		96FD47EDD22BBAF1D9D931ED /* Pods-PuffPuff-Pass.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PuffPuff-Pass.release.xcconfig"; path = "Target Support Files/Pods-PuffPuff-Pass/Pods-PuffPuff-Pass.release.xcconfig"; sourceTree = "<group>"; };
+		EF1254B3A07FA1E6E75818C9 /* Pods_PuffPuff_Pass.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PuffPuff_Pass.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +51,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CCBCF885230030625C829951 /* Pods_PuffPuff_Pass.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,6 +63,8 @@
 			children = (
 				891580ED2417953000ACC534 /* PuffPuff-Pass */,
 				891580EC2417953000ACC534 /* Products */,
+				DCF0837AEFA2EE7F22C386CE /* Pods */,
+				E27EEAADF3FB8D304F5D61CA /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -83,9 +92,28 @@
 				891581082417AC6300ACC534 /* SignUpViewController+UI.swift */,
 				891580F72417953000ACC534 /* Assets.xcassets */,
 				891580F92417953000ACC534 /* LaunchScreen.storyboard */,
+				891581122417C74B00ACC534 /* GoogleService-Info (1).plist */,
 				891580FC2417953000ACC534 /* Info.plist */,
 			);
 			path = "PuffPuff-Pass";
+			sourceTree = "<group>";
+		};
+		DCF0837AEFA2EE7F22C386CE /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7C9FF144A6E2874A73A2573D /* Pods-PuffPuff-Pass.debug.xcconfig */,
+				96FD47EDD22BBAF1D9D931ED /* Pods-PuffPuff-Pass.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		E27EEAADF3FB8D304F5D61CA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EF1254B3A07FA1E6E75818C9 /* Pods_PuffPuff_Pass.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -95,9 +123,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 891580FF2417953000ACC534 /* Build configuration list for PBXNativeTarget "PuffPuff-Pass" */;
 			buildPhases = (
+				D39D7A7D5B90D3F04EC6F035 /* [CP] Check Pods Manifest.lock */,
 				891580E72417953000ACC534 /* Sources */,
 				891580E82417953000ACC534 /* Frameworks */,
 				891580E92417953000ACC534 /* Resources */,
+				3ED8BB71FCAD69BFFAA73AB1 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -149,10 +179,53 @@
 				891580FB2417953000ACC534 /* LaunchScreen.storyboard in Resources */,
 				891581032417963F00ACC534 /* Welcome.storyboard in Resources */,
 				891580F82417953000ACC534 /* Assets.xcassets in Resources */,
+				891581132417C74B00ACC534 /* GoogleService-Info (1).plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3ED8BB71FCAD69BFFAA73AB1 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PuffPuff-Pass/Pods-PuffPuff-Pass-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PuffPuff-Pass/Pods-PuffPuff-Pass-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PuffPuff-Pass/Pods-PuffPuff-Pass-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D39D7A7D5B90D3F04EC6F035 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PuffPuff-Pass-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		891580E72417953000ACC534 /* Sources */ = {
@@ -302,6 +375,7 @@
 		};
 		891581002417953000ACC534 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7C9FF144A6E2874A73A2573D /* Pods-PuffPuff-Pass.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -320,6 +394,7 @@
 		};
 		891581012417953000ACC534 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 96FD47EDD22BBAF1D9D931ED /* Pods-PuffPuff-Pass.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
