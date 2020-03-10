@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -21,6 +21,8 @@
 		8915810F2417B9BA00ACC534 /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8915810E2417B9BA00ACC534 /* ForgotPasswordViewController.swift */; };
 		891581112417B9D000ACC534 /* ForgotPasswordViewController+UI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 891581102417B9D000ACC534 /* ForgotPasswordViewController+UI.swift */; };
 		8915811D2417E40600ACC534 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8915811C2417E40600ACC534 /* GoogleService-Info.plist */; };
+		8915811F241807FC00ACC534 /* Api.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8915811E241807FC00ACC534 /* Api.swift */; };
+		891581212418084400ACC534 /* UserApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 891581202418084400ACC534 /* UserApi.swift */; };
 		E2A8CB6010F937EE33A7F324 /* Pods_PuffPuff_Pass.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78C75105A7D0E7E3E9647357 /* Pods_PuffPuff_Pass.framework */; };
 /* End PBXBuildFile section */
 
@@ -44,6 +46,8 @@
 		8915810E2417B9BA00ACC534 /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
 		891581102417B9D000ACC534 /* ForgotPasswordViewController+UI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ForgotPasswordViewController+UI.swift"; sourceTree = "<group>"; };
 		8915811C2417E40600ACC534 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		8915811E241807FC00ACC534 /* Api.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Api.swift; sourceTree = "<group>"; };
+		891581202418084400ACC534 /* UserApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserApi.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +102,8 @@
 				8915810C2417B6F600ACC534 /* SignInViewController+UI.swift */,
 				891581062417A7F200ACC534 /* SignUpViewController.swift */,
 				891581082417AC6300ACC534 /* SignUpViewController+UI.swift */,
+				8915811E241807FC00ACC534 /* Api.swift */,
+				891581202418084400ACC534 /* UserApi.swift */,
 				891580F72417953000ACC534 /* Assets.xcassets */,
 				891580F92417953000ACC534 /* LaunchScreen.storyboard */,
 				891580FC2417953000ACC534 /* Info.plist */,
@@ -236,9 +242,11 @@
 				891581092417AC6300ACC534 /* SignUpViewController+UI.swift in Sources */,
 				891580F32417953000ACC534 /* ViewController.swift in Sources */,
 				891581112417B9D000ACC534 /* ForgotPasswordViewController+UI.swift in Sources */,
+				8915811F241807FC00ACC534 /* Api.swift in Sources */,
 				891580EF2417953000ACC534 /* AppDelegate.swift in Sources */,
 				8915810F2417B9BA00ACC534 /* ForgotPasswordViewController.swift in Sources */,
 				891581052417A57900ACC534 /* ViewController+UI.swift in Sources */,
+				891581212418084400ACC534 /* UserApi.swift in Sources */,
 				891580F12417953000ACC534 /* SceneDelegate.swift in Sources */,
 				891581072417A7F200ACC534 /* SignUpViewController.swift in Sources */,
 			);
