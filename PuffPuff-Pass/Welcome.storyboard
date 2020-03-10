@@ -417,11 +417,14 @@
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IBr-p8-uwL">
-                                <rect key="frame" x="20" y="186" width="374" height="30"/>
+                                <rect key="frame" x="20" y="186" width="374" height="50"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="Tvj-2S-ysz"/>
+                                    <constraint firstAttribute="height" constant="50" id="Tvj-2S-ysz"/>
                                 </constraints>
                                 <state key="normal" title="Reset Password"/>
+                                <connections>
+                                    <action selector="resetPasswordDidTapped:" destination="Ign-hH-DD4" eventType="touchUpInside" id="Psd-qu-pzL"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>

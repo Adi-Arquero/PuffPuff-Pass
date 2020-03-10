@@ -21,6 +21,9 @@ let ERROR_EMPTY_PHOTO = "Please choose you profile Image"
 let ERROR_EMPTY_EMAIL = "Please enter an email address"
 let ERROR_EMPTY_USERNAME = "Please enter username"
 let ERROR_EMPTY_PASSWORD = "Please enter password"
+let ERROR_EMPTY_EMAIL_RESET = "Please enter an email"
+
+let SUCCESS_EMAIL_RESET = " We have just sent you an email to reset your password, Please check your inbox for instructions."
 
 
 class Ref { 
