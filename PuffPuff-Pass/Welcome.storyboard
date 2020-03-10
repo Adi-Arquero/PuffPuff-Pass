@@ -199,6 +199,10 @@
                                     <constraint firstAttribute="height" constant="50" id="2ZH-R9-P9Q"/>
                                 </constraints>
                                 <state key="normal" title="Sign Up"/>
+                                <connections>
+                                    <action selector="signUpButtonDidTapped:" destination="dRP-0Z-BkN" eventType="touchUpInside" id="BVd-XW-oUr"/>
+                                    <action selector="signUpButtonDidTapped:" destination="IHr-JT-zi9" eventType="touchUpInside" id="gfq-1E-Hrx"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EXN-Nm-wmw">
                                 <rect key="frame" x="20" y="587" width="374" height="30"/>
@@ -252,6 +256,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rmV-gg-oiV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="IHr-JT-zi9" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1795.6521739130437" y="49.553571428571423"/>
         </scene>
