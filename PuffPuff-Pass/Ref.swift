@@ -17,7 +17,10 @@ let UID = "uid"
 let EMAIL = "email"
 let USERNAME = "username"
 let STATUS = "status"
-
+let ERROR_EMPTY_PHOTO = "Please choose you profile Image"
+let ERROR_EMPTY_EMAIL = "Please enter an email address"
+let ERROR_EMPTY_USERNAME = "Please enter username"
+let ERROR_EMPTY_PASSWORD = "Please enter password"
 
 
 class Ref { 

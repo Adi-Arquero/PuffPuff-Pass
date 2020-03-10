@@ -23,7 +23,7 @@ class UserApi {
             }
             if let authData = authDataResult {
                 print(authData.user.email)
-                var dict: Dictionary<String, Any> = [
+                let dict: Dictionary<String, Any> = [
                     UID: authData.user.uid,
                     EMAIL: authData.user.email,
                     USERNAME: username,
@@ -32,7 +32,7 @@ class UserApi {
                 ]
                 
                 guard let imageSelected = image else {
-                    ProgressHUD.showError("Please choose a profile image")
+                    ProgressHUD.showError(ERROR_EMPTY_PHOTO)
                     return
                 }
                 guard let imageData = imageSelected.jpegData(compressionQuality: 0.4) else {
