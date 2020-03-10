@@ -10,6 +10,7 @@ import UIKit
 import FirebaseAuth
 import FirebaseDatabase
 import FirebaseStorage
+import ProgressHUD
 
 class SignUpViewController: UIViewController {
     
@@ -48,10 +49,27 @@ class SignUpViewController: UIViewController {
         navigationController?.popViewController(animated: true)
     }
     
+    func validateFields() {
+        guard let username = self.fullnameTextField.text, !username.isEmpty else {
+            ProgressHUD.showError("Please enter a username")
+            return
+        }
+        guard let email = self.emailTextField.text, !email.isEmpty else {
+            ProgressHUD.showError("Please enter an email address")
+            return
+        }
+        guard let password = self.passwordTextField.text, !password.isEmpty else {
+            ProgressHUD.showError("Please enter a password")
+            return
+        }
+    }
+    
     @IBAction func signUpButtonDidTapped(_ sender: Any) {
+        self.view.endEditing(true)
+        self.validateFields()
         
         guard let imageSelected = self.image else {
-            print("Avatar is nil")
+            ProgressHUD.showError("Please choose a profile image")
             return
         }
         guard let imageData = imageSelected.jpegData(compressionQuality: 0.4) else {
@@ -60,9 +78,9 @@ class SignUpViewController: UIViewController {
         
         
         
-        Auth.auth().createUser(withEmail: "test007@gmail.com", password: "123456") { (authDataResult, error) in
+        Auth.auth().createUser(withEmail: self.emailTextField.text!, password: self.passwordTextField.text!) { (authDataResult, error) in
             if error != nil {
-                print(error!.localizedDescription)
+                ProgressHUD.showError(error!.localizedDescription)
                 return
             }
             if let authData = authDataResult {
@@ -70,6 +88,7 @@ class SignUpViewController: UIViewController {
                 var dict: Dictionary<String, Any> = [
                     "uid": authData.user.uid,
                     "email": authData.user.email,
+                    "username": self.fullnameTextField.text,
                     "profileImageUrl": "",
                     "status": "Welcome to PuffPuff-Pass"
                 ]
@@ -89,7 +108,7 @@ class SignUpViewController: UIViewController {
                         if let metaImageUrl = url?.absoluteString {
                             dict["profileImageUrl"] = metaImageUrl
                             
-
+                            
                             Database.database().reference().child("users").child(authData.user.uid).updateChildValues(dict,withCompletionBlock: { (error, ref) in
                                 if error == nil {
                                     print("Done")
@@ -98,7 +117,7 @@ class SignUpViewController: UIViewController {
                         }
                     })
                 })
-
+                
             }
         }
         
