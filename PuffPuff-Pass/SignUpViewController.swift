@@ -9,10 +9,11 @@
 import UIKit
 import FirebaseAuth
 import FirebaseDatabase
+import FirebaseStorage
 
 class SignUpViewController: UIViewController {
-
-  
+    
+    
     
     @IBOutlet weak var titleTextLabel: UILabel!
     @IBOutlet weak var avatar: UIImageView!
@@ -25,6 +26,7 @@ class SignUpViewController: UIViewController {
     @IBOutlet weak var signUpButton: UIButton!
     @IBOutlet weak var signInButton: UIButton!
     
+    var image: UIImage? = nil
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,13 +43,24 @@ class SignUpViewController: UIViewController {
         setupSignUpButton()
         setupSignInButton()
     }
-
+    
     @IBAction func dismissAction(_ sender: Any) {
         navigationController?.popViewController(animated: true)
     }
     
     @IBAction func signUpButtonDidTapped(_ sender: Any) {
-        Auth.auth().createUser(withEmail: "test003@gmail.com", password: "123456") { (authDataResult, error) in
+        
+        guard let imageSelected = self.image else {
+            print("Avatar is nil")
+            return
+        }
+        guard let imageData = imageSelected.jpegData(compressionQuality: 0.4) else {
+            return
+        }
+        
+        
+        
+        Auth.auth().createUser(withEmail: "test004@gmail.com", password: "123456") { (authDataResult, error) in
             if error != nil {
                 print(error!.localizedDescription)
                 return
@@ -58,10 +71,36 @@ class SignUpViewController: UIViewController {
                     "uid": authData.user.uid,
                     "email": authData.user.email,
                     "profileImageUrl": "",
-                    "status": ""
+                    "status": "Welcome to PuffPuff-Pass"
                 ]
                 
-                Database.database().reference().child("users").child(authData.user.uid).updateChildValues(dict, withCompletionBlock: { (error, ref) in
+                let storageRef = Storage.storage().reference(forURL: "gs://puffpuff-pass-341b3.appspot.com")
+                let storageProfileRef = storageRef.child("profile").child(authData.user.uid)
+                
+                let metadata = StorageMetadata()
+                metadata.contentType = "image/jpg"
+                // might need a completion here
+                storageProfileRef.putData(imageData, metadata: metadata, completion: { (storageMetaData, error) in
+                    if error != nil {
+                        print(error?.localizedDescription)
+                        return
+                    }
+                })
+                
+                //                let storageRef = Storage.storage().reference(forURL:"https://puffpuff-pass-341b3.firebaseio.com/")
+                //                let storageProfileRef = storageRef.child("profile").child(authData.user.uid)
+                //
+                //                let metadata = StorageMetadata()
+                //                metadata.contentType = "image/jpg"
+                //                storageProfileRef.putData(imageData, metadata: metadata, completion: { (storageMetaData, error) in
+                //                    if error != nil {
+                //                        print(error?.localizedDescription)
+                //                        return
+                //                }
+                //
+                //
+                //                })
+                Database.database().reference().child("users").child(authData.user.uid).updateChildValues(dict,withCompletionBlock: { (error, ref) in
                     if error == nil {
                         print("Done")
                     }

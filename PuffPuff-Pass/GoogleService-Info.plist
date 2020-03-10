@@ -3,21 +3,21 @@
 <plist version="1.0">
 <dict>
 	<key>CLIENT_ID</key>
-	<string>1008002676579-jvcdkes9cv4upo0dg3milh18nr7lmco9.apps.googleusercontent.com</string>
+	<string>1007348914986-3rhsb4kdg1s7koeuelld8tbav5uqbclt.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.1008002676579-jvcdkes9cv4upo0dg3milh18nr7lmco9</string>
+	<string>com.googleusercontent.apps.1007348914986-3rhsb4kdg1s7koeuelld8tbav5uqbclt</string>
 	<key>API_KEY</key>
-	<string>AIzaSyCPJfp4TBplgWv-7pbH-rpyBDF8dSvvSqY</string>
+	<string>AIzaSyDYCrEOD_tF7kPvfvnd5IH3IDJuMb3Tbks</string>
 	<key>GCM_SENDER_ID</key>
-	<string>1008002676579</string>
+	<string>1007348914986</string>
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
 	<string>com.arquerostudios.PuffPuff-Pass</string>
 	<key>PROJECT_ID</key>
-	<string>puffpuff-pass</string>
+	<string>puffpuff-pass-341b3</string>
 	<key>STORAGE_BUCKET</key>
-	<string>puffpuff-pass.appspot.com</string>
+	<string>puffpuff-pass-341b3.appspot.com</string>
 	<key>IS_ADS_ENABLED</key>
 	<false></false>
 	<key>IS_ANALYTICS_ENABLED</key>
@@ -29,8 +29,8 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:1008002676579:ios:1f7552804d8ee3f12ac556</string>
+	<string>1:1007348914986:ios:b55e46baeecb51f3a81c53</string>
 	<key>DATABASE_URL</key>
-	<string>https://puffpuff-pass.firebaseio.com</string>
+	<string>https://puffpuff-pass-341b3.firebaseio.com</string>
 </dict>
 </plist>
